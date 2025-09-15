@@ -1,0 +1,9 @@
+services:
+  repos-init:
+    image: fast-init-github
+    stdin_open: true
+    tty: true
+    volumes:
+      - .:/app
+      - ${USER_HOME}/.ssh:/root/.ssh:rw
+      - ./workspace:/workspace
